@@ -22,7 +22,7 @@ print(f"\nDescribe:\n{describe_monthly_revenue}")
 # it pulls the mean up ~$13k above where most months actually cluster.
 # Median, using only the middle value's rank, ignores that outlier entirely.
 
-monthly_revenue_series.hist()
+monthly_revenue_series[monthly_revenue_series < 100000].hist()
 plt.title("Monthly Revenue Distribution")
 plt.xlabel("Revenue ($)")
 plt.ylabel("Frequency")
